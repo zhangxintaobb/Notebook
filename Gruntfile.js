@@ -39,7 +39,7 @@ module.exports = function (grunt) {
               expand: true,
               cwd: './images', //原图存放的文件夹
               src: ['**/*.{png,jpg,jpeg,gif}'], // 优化 img 目录下所有 png/jpg/jpeg/gif图片
-              dest: 'dist/img/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
+              dest: 'dist/images/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
           }]
       }
   },
@@ -49,8 +49,8 @@ module.exports = function (grunt) {
         dest: './dist/index.html'
       },
       image: {
-        src: "./img",
-        dest: "./dist/img"
+        src: "./images",
+        dest: "./dist/images"
     }
     },
     concat: {
