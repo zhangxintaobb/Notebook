@@ -44,11 +44,11 @@ module.exports = function (grunt) {
     },
     concat: {
       js: {
-        src: ['js/*.js', './com/**/*.js'],
+        src: ['js/*.js'],
         dest: 'dist/bundle.js'
       },
       css: {
-        src: ['css/*.css', './com/**/*.css'],
+        src: ['css/*.css'],
         dest: 'dist/bundle.css'
       }
     },
@@ -85,6 +85,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-usemin');
 
-  grunt.registerTask('lint', ['htmlhint', 'csslint', 'eslint']);
-  grunt.registerTask('build', ['copy:html', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'htmlmin', 'clean:end']);
+  grunt.registerTask('release', ['copy:html', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'htmlmin', 'clean:end']);
 };
