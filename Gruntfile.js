@@ -39,7 +39,7 @@ module.exports = function (grunt) {
               expand: true,
               cwd: './images', //原图存放的文件夹
               src: ['**/*.{png,jpg,jpeg,gif}'], // 优化 img 目录下所有 png/jpg/jpeg/gif图片
-              dest: 'dist/images/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
+              dest: 'dist/img/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
           }]
       }
   },
@@ -47,11 +47,7 @@ module.exports = function (grunt) {
       html: {
         src: './index.html',
         dest: './dist/index.html'
-      },
-      image: {
-        src: "./images",
-        dest: "./dist/images"
-    }
+      }
     },
     concat: {
       js: {
@@ -96,5 +92,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-usemin');
 
-  grunt.registerTask('release', ['copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'htmlmin', 'clean:end','imagemin']);
+  grunt.registerTask('release', ['copy:html', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'htmlmin', 'clean:end']);
 };
