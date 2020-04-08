@@ -1,33 +1,35 @@
 {
   "name": "Notebook",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Windows 记事本网页版",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-eslint": "^21.1.0",
+    "grunt-contrib-uglify": "^3.4.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-usemin": "^3.1.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "grunt lint",
-    "build": "grunt build"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhangxintaobb/Notebook.git"
   },
+  "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhangxintaobb/Notebook/issues"
   },
-  "homepage": "https://github.com/zhangxintaobb/Notebook#readme",
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-csslint": "^2.0.0",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-imagemin": "^2.0.1",
-    "grunt-contrib-uglify": "^3.3.0",
-    "grunt-eslint": "^21.0.0",
-    "grunt-htmlhint": "^0.9.13",
-    "grunt-usemin": "^3.1.1"
-  }
+  "homepage": "https://github.com/zhangxintaobb/Notebook#readme"
 }
