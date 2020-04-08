@@ -30,17 +30,28 @@ module.exports = function (grunt) {
       }
     },
     imagemin: {
-      files: {
-        expand: true,
-        src: ['./images/*.png'],
-        dest: 'dist/'
+      /* 压缩图片大小 */
+      dist: {
+          options: {
+              optimizationLevel: 1 //定义 PNG 图片优化水平
+          },
+          files: [{
+              expand: true,
+              cwd: './images', //原图存放的文件夹
+              src: ['**/*.{png,jpg,jpeg,gif}'], // 优化 img 目录下所有 png/jpg/jpeg/gif图片
+              dest: 'dist/img/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
+          }]
       }
-    },
+  },
     copy: {
       html: {
         src: './index.html',
         dest: './dist/index.html'
-      }
+      },
+      image: {
+        src: "./img",
+        dest: "./dist/img"
+    }
     },
     concat: {
       js: {
